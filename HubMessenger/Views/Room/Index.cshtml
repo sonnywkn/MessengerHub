@@ -1,0 +1,25 @@
+﻿@model HubMessenger.ViewModels.RoomViewModel;
+
+@{
+    ViewData["Title"] = "Chat Room";
+}
+
+
+<div>
+    <div>
+        @Model.Id
+    </div>
+    <div>
+        @Model.RoomName
+    </div>
+    <div>
+        @Model.HostName
+    </div>
+    <input id="message" type="text" placeholder="Send a message..." required />
+    <button id="send">Send</button>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/send-message.js"></script>
+}

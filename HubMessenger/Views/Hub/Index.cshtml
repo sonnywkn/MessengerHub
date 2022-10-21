@@ -1,0 +1,21 @@
+﻿@model HubMessenger.ViewModels.HubViewModel;
+
+@{
+    ViewData["Title"] = "Hub Messenger";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hub Messenger</h1>
+    <p>Please join a room to start Chatting.</p>
+    <div id="activeRooms" class="table">
+        @foreach (var room in Model.ActiveRooms)
+        {
+            <partial name="_ActiveRoomPartial" model="room" />
+        }
+    </div>
+    <form method="post" action="Hub/CreateRoom">
+        <input type="text" placeholder="Enter Room Name..." name="name" required/>
+        <input type="text" placeholder="Enter Host Name..." name="HostName" required/>
+        <button type="submit">Create Room</button>
+    </form>
+</div>

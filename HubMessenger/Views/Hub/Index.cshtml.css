@@ -1,0 +1,6 @@
+﻿#activeRooms {
+    border: solid 1px black;
+    width: 100%;
+    height: 600px;
+    min-height: 200px;
+}

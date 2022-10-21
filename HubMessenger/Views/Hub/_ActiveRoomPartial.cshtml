@@ -1,0 +1,22 @@
+﻿@model HubMessenger.ViewModels.ActiveRoomViewModel
+
+<div id="activeRoomPartial" class="row">
+    <div class="col">
+        @Model.Name
+    </div>
+    <div class="col">
+        @Model.HostName
+    </div>
+    <div class="col">
+        <div>
+            <button>Join</button>
+        </div>
+    </div>
+    <!--
+        Insert a button here to join an existing room
+    -->
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

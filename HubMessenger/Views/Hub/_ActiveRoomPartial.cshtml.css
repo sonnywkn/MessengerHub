@@ -1,0 +1,9 @@
+﻿#activeRoomPartial {
+    border: solid 1px black;
+    height: 10%;
+    width: 100%;
+}
+
+.row {
+    --bs-gutter-x: 0rem;
+}
